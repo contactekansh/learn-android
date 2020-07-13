@@ -12,8 +12,8 @@ jobs:
       # - run: echo "$PLAY_STORE_UPLOAD_KEY" | base64 --decode > key.jks
       # - run: echo "$PLAY_STORE_UPLOAD_KEY_INFO" | base64 --decode > android/key.properties
       # - run: whoami
-      # - run: chown -R cirrus:cirrus /home/cirrus/project
-      - run: cd final && bundle exec fastlane beta
+      - run: chown -R root:root /root/project
+      - run: cd final && && bundle install && bundle install && bundle exec fastlane beta
 
 workflows:
   deploy:
