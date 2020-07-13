@@ -16,4 +16,4 @@ jobs:
 workflows:
   deploy:
     jobs:
-      - beta_deploy:
+      - beta_deploy
