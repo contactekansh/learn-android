@@ -13,6 +13,7 @@ jobs:
       # - run: echo "$PLAY_STORE_UPLOAD_KEY_INFO" | base64 --decode > android/key.properties
       # - run: whoami
       - run: chmod -R 777 /root/project
+      - run: export ANDROID_SDK=/opt/android-sdk
       - run: cd final && gem install bundler:1.17.3 && bundle install && bundle exec fastlane beta
 
 workflows:
