@@ -3,7 +3,7 @@ version: 2.1
 executors:
   android-flutter:
     docker:
-      - image: gmemstr/flutter-fastlane:latest
+      - image: contactekansh/android-fastlane:tagname
 jobs:
   beta_deploy:
     executor: android-flutter
