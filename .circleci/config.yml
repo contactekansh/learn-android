@@ -31,17 +31,17 @@ workflows:
   deploy:
     jobs:
       - build
-        filters:
-          branches:
-            only:
-              - dev
+          filters:
+            branches:
+              only:
+                - dev
       - beta_deploy
           filters:
             branches:
               only:
                 - staging
           requires:
-               - build
+            - build
       - deploy
           filters:
             branches:
