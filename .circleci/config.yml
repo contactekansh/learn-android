@@ -30,20 +30,21 @@ jobs:
 workflows:
   deploy:
     jobs:
-      - build
+      - build:
           filters:
             branches:
               only:
                 - dev
-      - beta_deploy
+      - beta_deploy:
           filters:
             branches:
               only:
                 - staging
           requires:
             - build
-      - deploy
+      - deploy:
           filters:
             branches:
               only:
                 - master
+
