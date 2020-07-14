@@ -40,8 +40,8 @@ workflows:
               branches:
                 only:
                     - staging
-              requires:
-                - build
+            requires:
+              - build
       - deploy:
             filters:
               branches:
